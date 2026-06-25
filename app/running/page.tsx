@@ -93,6 +93,25 @@ export default function RunningPage() {
         </div>
       </section>
 
+      {/* Training diary */}
+      <section className="mb-8">
+        <Link
+          href="/running/diary"
+          className="group flex items-center justify-between p-6 border border-gray-100 rounded-xl hover:border-gray-200 hover:shadow-sm transition-all duration-200"
+        >
+          <div>
+            <p className="text-sm font-semibold text-gray-900">Training Diary</p>
+            <p className="text-sm text-gray-400 mt-0.5">Weekly entries generated from Strava — what I ran and how it felt.</p>
+          </div>
+          <svg
+            className="w-4 h-4 text-gray-300 group-hover:text-gray-500 transform group-hover:translate-x-0.5 transition-all duration-200"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </Link>
+      </section>
+
       {/* Strava CTA */}
       <section className="pt-10 border-t border-gray-100">
         <Link

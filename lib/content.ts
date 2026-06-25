@@ -42,6 +42,52 @@ export function getLatestArticles(count = 3): Article[] {
     .slice(0, count);
 }
 
+// ── Diary ────────────────────────────────────────────────
+
+const diaryDir = path.join(process.cwd(), "content", "diary");
+
+export interface DiaryRun {
+  day: string;
+  label: string;
+  km: number;
+  pace: string | null;
+}
+
+export interface DiaryEntry {
+  slug: string;
+  week_start: string;
+  week_end: string;
+  total_km: number;
+  sessions: number;
+  elevation: number;
+  runs: DiaryRun[];
+  body: string;
+}
+
+export function getAllDiaryEntries(): DiaryEntry[] {
+  if (!fs.existsSync(diaryDir)) return [];
+
+  return fs
+    .readdirSync(diaryDir)
+    .filter((f) => f.endsWith(".md"))
+    .map((file) => {
+      const slug = file.replace(/\.md$/, "");
+      const raw = fs.readFileSync(path.join(diaryDir, file), "utf-8");
+      const { data, content } = matter(raw);
+      return {
+        slug,
+        week_start: data.week_start ?? "",
+        week_end: data.week_end ?? "",
+        total_km: data.total_km ?? 0,
+        sessions: data.sessions ?? 0,
+        elevation: data.elevation ?? 0,
+        runs: Array.isArray(data.runs) ? data.runs : [],
+        body: content.trim(),
+      };
+    })
+    .sort((a, b) => new Date(b.week_start).getTime() - new Date(a.week_start).getTime());
+}
+
 // ── Building ─────────────────────────────────────────────
 
 const buildingDir = path.join(process.cwd(), "content", "building");
