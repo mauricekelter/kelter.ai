@@ -5,7 +5,7 @@ import BuildingGrid from "@/components/BuildingGrid";
 export const metadata: Metadata = {
   title: "Building",
   description:
-    "Things I'm building — productivity tools, investing tools, and running utilities.",
+    "Things I'm building: productivity tools, investing tools, and running utilities.",
 };
 
 export default function BuildingPage() {

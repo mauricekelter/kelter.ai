@@ -5,7 +5,7 @@ import DiaryAccordion from "@/components/DiaryAccordion";
 
 export const metadata: Metadata = {
   title: "Training Diary",
-  description: "Maurice Kelter's weekly training diary — powered by Strava.",
+  description: "Maurice Kelter's weekly training diary, powered by Strava.",
 };
 
 export default function DiaryPage() {

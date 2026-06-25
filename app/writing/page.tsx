@@ -5,7 +5,7 @@ import WritingGrid from "@/components/WritingGrid";
 export const metadata: Metadata = {
   title: "Writing",
   description:
-    "Writing on running, building, and investing — by Maurice Kelter.",
+    "Writing on running, building, and investing, by Maurice Kelter.",
 };
 
 export default function WritingPage() {

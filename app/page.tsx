@@ -8,21 +8,28 @@ const areas = [
     href: "/running",
     stat: "100km+ per week",
     description:
-      "Training for a sub-2:30 marathon at Gold Coast in July 2026. Running is where I do my best thinking.",
+      "Training toward sub-2:30 at Gold Coast in July 2026. Running is where I do my best thinking.",
   },
   {
     label: "Building",
     href: "/building",
-    stat: "5 projects",
+    stat: "Building in public",
     description:
-      "Tools built for problems I actually have — running, investing, and getting things done.",
+      "Products built for problems I actually have. Running, investing, getting things done. If I needed it, I built it.",
   },
   {
     label: "Investing",
     href: "/about",
     stat: "Angel investor",
     description:
-      "Early stage. StartMate First Believers cohort. Focused on SaaS and sports. Just getting started.",
+      "Early in the journey. StartMate First Believers. Looking for founders with one thing that's undeniably exceptional, and backing them early.",
+  },
+  {
+    label: "Go-to-Market",
+    href: "/writing",
+    stat: "Over a decade in strategy",
+    description:
+      "A student of the business world. Always been fascinated by how companies are built, structured, and grown. Over a decade in strategy, now focused on sales and go-to-market at HubSpot.",
   },
 ];
 
@@ -40,14 +47,17 @@ export default async function HomePage() {
           Maurice Kelter
         </h1>
         <p className="text-xl text-gray-500 max-w-lg leading-relaxed">
-          Runner. Builder. Investor. I train 100km a week, build products, and
-          back the next generation of founders.
+          Spent six years as a management consultant across industries, then
+          crossed over to build go-to-market strategy at HubSpot. Running,
+          building products, and backing early-stage founders take up the rest.
+          The common thread: figuring out how things grow. Companies, athletes,
+          ideas.
         </p>
       </section>
 
       {/* Area cards */}
       <section className="pb-24">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           {areas.map(({ label, href, stat, description }) => (
             <Link
               key={label}

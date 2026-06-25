@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Running",
   description:
-    "Maurice Kelter's running — training logs, race goals, and the marathon calculator tool.",
+    "Maurice Kelter's running: training logs, race goals, and the weekly diary.",
 };
 
 const stats = [
@@ -36,7 +36,7 @@ export default function RunningPage() {
         </h1>
         <p className="text-lg text-gray-500 max-w-lg leading-relaxed">
           Running is my non-negotiable. It&apos;s where I process, plan, and
-          reset. The volume is high — not because I&apos;m chasing fitness, but
+          reset. The volume is high. Not because I&apos;m chasing fitness, but
           because it&apos;s become the baseline I need to function well.
         </p>
         <p className="text-lg text-gray-500 max-w-lg leading-relaxed mt-4">
@@ -101,7 +101,7 @@ export default function RunningPage() {
         >
           <div>
             <p className="text-sm font-semibold text-gray-900">Training Diary</p>
-            <p className="text-sm text-gray-400 mt-0.5">Weekly entries generated from Strava — what I ran and how it felt.</p>
+            <p className="text-sm text-gray-400 mt-0.5">Weekly entries generated from Strava: what I ran and how it felt.</p>
           </div>
           <svg
             className="w-4 h-4 text-gray-300 group-hover:text-gray-500 transform group-hover:translate-x-0.5 transition-all duration-200"
@@ -122,7 +122,7 @@ export default function RunningPage() {
         >
           <div>
             <p className="text-sm font-semibold text-gray-900">Follow on Strava</p>
-            <p className="text-sm text-gray-400 mt-0.5">Every run logged — training, races, and everything in between.</p>
+            <p className="text-sm text-gray-400 mt-0.5">Every run logged: training, races, and everything in between.</p>
           </div>
           <svg
             className="w-4 h-4 text-gray-300 group-hover:text-gray-500 transform group-hover:translate-x-0.5 transition-all duration-200"
